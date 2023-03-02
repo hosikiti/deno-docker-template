@@ -1,0 +1,14 @@
+version: '3.2'
+services:
+  deno_app:
+    container_name: deno_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    environment:
+      - DENO_SERVER_PORT=3003
+    ports:
+      - "3003:3003"
+    volumes:
+      - ./:/app
