@@ -1,7 +1,6 @@
 version: '3.2'
 services:
   deno_app:
-    container_name: deno_app
     build:
       context: .
       dockerfile: Dockerfile
